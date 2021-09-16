@@ -9,6 +9,11 @@ interface CustomRouteInterface {
   [key: string]: any
 }
 
+/**
+ * CustomRoute
+ * @param param PropsWithChildren<CustomRouteInterface>
+ * @returns
+ */
 const CustomRoute = ({
   component: Component,
   ...rest

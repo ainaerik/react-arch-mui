@@ -1,3 +1,7 @@
-import styled from 'styled-components'
+import { makeStyles } from '@mui/styles'
 
-export const UnauthorizedSection = styled.section``
+const useStyles = makeStyles({
+  root: {},
+})
+
+export default useStyles

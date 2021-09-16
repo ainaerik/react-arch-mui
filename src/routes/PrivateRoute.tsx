@@ -11,6 +11,11 @@ interface PrivateRouteInterface {
   [key: string]: any
 }
 
+/**
+ * PrivateRoute
+ * @param param PropsWithChildren<PrivateRouteInterface>
+ * @returns
+ */
 const PrivateRoute = ({
   component: Component,
   roles,

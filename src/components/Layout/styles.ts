@@ -1,5 +1,8 @@
-import styled from 'styled-components'
+import { makeStyles } from '@mui/styles'
 
-export const MainLayout = styled.main``
+const useStyles = makeStyles({
+  layout: {},
+  content: {},
+})
 
-export const MainContent = styled.section``
+export default useStyles

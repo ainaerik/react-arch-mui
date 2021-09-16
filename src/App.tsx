@@ -1,6 +1,7 @@
-import React, { Suspense, useContext } from 'react'
+import React, { Suspense, useContext, useMemo } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
+import { CssBaseline } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 
 import routes from '@routes/routes'
 import CustomRoute from '@routes/CustomRoute'
@@ -8,13 +9,27 @@ import PrivateRoute from '@routes/PrivateRoute'
 import NotFound from '@pages/NotFound'
 import FullPageLoading from '@components/FullPageLoading'
 import ThemeContext from '@contexts/ThemeContext'
-import { GlobalStyles } from '@themes/GlobalStyles'
 import { DarkTheme, LightTheme } from '@themes/index'
 
+/**
+ * Main App
+ * @returns
+ */
 const App = () => {
   const { mode } = useContext(ThemeContext)
-  const theme = mode === 'dark' ? DarkTheme : LightTheme
 
+  /**
+   * Toggle theme
+   */
+  const theme = useMemo(
+    () => (mode === 'dark' ? DarkTheme : LightTheme),
+    [mode]
+  )
+
+  /**
+   * Routes
+   * @returns
+   */
   const getRoutes = () => {
     return routes.map(({ key, path, component, isExact, isPrivate, roles }) =>
       isPrivate ? (
@@ -39,7 +54,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
+      <CssBaseline />
       <Suspense fallback={<FullPageLoading />}>
         <Switch>
           {getRoutes()}

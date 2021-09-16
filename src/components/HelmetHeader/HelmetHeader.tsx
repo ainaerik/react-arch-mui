@@ -6,6 +6,11 @@ interface HelmetHeaderProps {
   title: string
 }
 
+/**
+ * HelmetHeader
+ * @param param HelmetHeaderProps
+ * @returns
+ */
 const HelmetHeader: FC<HelmetHeaderProps> = ({ title }) => {
   const { t } = useTranslation('common')
 
