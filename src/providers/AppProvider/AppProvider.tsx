@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import AppContext from '@contexts/ThemeContext'
+import AppContext from '@contexts/AppContext'
 import ThemeProvider from '@providers/ThemeProvider'
 
 const AppProvider: FC = (props) => {
