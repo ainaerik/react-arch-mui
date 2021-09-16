@@ -1,0 +1,16 @@
+{
+  "app":{
+    "name": "Meal App",
+    "url": "http://localhost:3000",
+    "dev":{
+      "name":"Ny Aina Erick",
+      "email":"ainaerik@gmail.com",
+      "website":"https://ainaerik.github.com"
+    }
+  },
+  "tabs":{
+    "home": "Home",
+    "notfound": "Page not found",
+    "unauthorized": "Unauthorized page"
+  }
+}
