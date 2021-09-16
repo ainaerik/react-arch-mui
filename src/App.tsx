@@ -1,25 +1,20 @@
-import React, { Suspense } from 'react'
-import { I18nextProvider, initReactI18next } from 'react-i18next'
-import i18next from 'i18next'
+import React, { Suspense, useContext } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
+import { ThemeProvider } from 'styled-components'
 
-import resources from '@assets/i18next'
 import routes from '@routes/routes'
 import CustomRoute from '@routes/CustomRoute'
 import PrivateRoute from '@routes/PrivateRoute'
 import NotFound from '@pages/NotFound'
 import FullPageLoading from '@components/FullPageLoading'
-import AppProvider from '@providers/AppProvider'
-
-// Internationalization
-i18next.use(initReactI18next).init({
-  interpolation: { escapeValue: false },
-  lng: 'en',
-  resources,
-})
+import ThemeContext from '@contexts/ThemeContext'
+import { GlobalStyles } from '@themes/GlobalStyles'
+import { DarkTheme, LightTheme } from '@themes/index'
 
 const App = () => {
+  const { mode } = useContext(ThemeContext)
+  const theme = mode === 'dark' ? DarkTheme : LightTheme
+
   const getRoutes = () => {
     return routes.map(({ key, path, component, isExact, isPrivate, roles }) =>
       isPrivate ? (
@@ -43,18 +38,15 @@ const App = () => {
   }
 
   return (
-    <I18nextProvider i18n={i18next}>
-      <HelmetProvider>
-        <AppProvider>
-          <Suspense fallback={<FullPageLoading />}>
-            <Switch>
-              {getRoutes()}
-              <Route component={NotFound} />
-            </Switch>
-          </Suspense>
-        </AppProvider>
-      </HelmetProvider>
-    </I18nextProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Suspense fallback={<FullPageLoading />}>
+        <Switch>
+          {getRoutes()}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
+    </ThemeProvider>
   )
 }
 

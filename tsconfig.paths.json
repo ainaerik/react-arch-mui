@@ -9,6 +9,7 @@
       "@providers/*": ["./src/providers/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@utils/*": ["./src/utils/*"],
+      "@themes/*": ["./src/themes/*"],
       "@assets/*": ["./src/assets/*"],
       "@images/*": ["./src/assets/images/*"]
     }
