@@ -1,7 +1,13 @@
 import { createContext } from 'react'
 
-interface ThemeContextInterface {}
+interface ThemeContextInterface {
+  mode: string
+  setMode: (mode: string) => void
+}
 
-const ThemeContext = createContext<ThemeContextInterface>({})
+const ThemeContext = createContext<ThemeContextInterface>({
+  mode: 'light',
+  setMode: () => {},
+})
 
 export default ThemeContext

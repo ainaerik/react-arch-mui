@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { HomeSection } from './styles'
-import Layout from '../../components/Layout/Layout'
+import Layout from '@components/Layout/Layout'
 
 interface HomeProps {}
 

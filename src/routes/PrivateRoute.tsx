@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, useState, useEffect } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
-import { ROLE } from '../utils/role'
+import { ROLE } from '@utils/role'
 
 interface PrivateRouteInterface {
   component:

@@ -4,13 +4,13 @@ import i18next from 'i18next'
 import { Switch, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 
-import resources from './assets/i18next'
-import routes from './routes/routes'
-import CustomRoute from './routes/CustomRoute'
-import PrivateRoute from './routes/PrivateRoute'
-import AppProvider from './providers/AppProvider'
-import NotFound from './pages/NotFound'
-import FullPageLoading from './components/FullPageLoading'
+import resources from '@assets/i18next'
+import routes from '@routes/routes'
+import CustomRoute from '@routes/CustomRoute'
+import PrivateRoute from '@routes/PrivateRoute'
+import NotFound from '@pages/NotFound'
+import FullPageLoading from '@components/FullPageLoading'
+import AppProvider from '@providers/AppProvider'
 
 // Internationalization
 i18next.use(initReactI18next).init({
