@@ -12,7 +12,8 @@
       "@utils/*": ["./src/utils/*"],
       "@themes/*": ["./src/themes/*"],
       "@assets/*": ["./src/assets/*"],
-      "@images/*": ["./src/assets/images/*"]
+      "@images/*": ["./src/assets/images/*"],
+      "@services/*": ["./src/services/*"]
     }
   }
 }
