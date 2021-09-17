@@ -30,6 +30,9 @@
     },
     "fullpageLoading": {
       "text": "Chargement..."
+    },  
+    "login": {
+      "text":"Connexion"
     }
   }
 }

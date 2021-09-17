@@ -8,15 +8,14 @@ export interface RouteInterface {
   isExact: boolean
   isPrivate: boolean
   roles: Array<ROLE>
-  component:
-    | React.ComponentType<any>
-    | React.LazyExoticComponent<React.ComponentType<any>>
+  component: React.ComponentType<any> | React.LazyExoticComponent<React.ComponentType<any>>
 }
 
 /**
  * Lazy loading components
  */
 const Home = lazy(() => import('../pages/Home'))
+const Login = lazy(() => import('../pages/Login'))
 const NotFound = lazy(() => import('../pages/NotFound'))
 const Unauthorized = lazy(() => import('../pages/Unauthorized'))
 
@@ -31,6 +30,14 @@ const routes: RouteInterface[] = [
     isPrivate: true,
     roles: [ROLE.USER],
     component: Home,
+  },
+  {
+    key: 'login',
+    path: '/login',
+    isExact: true,
+    isPrivate: false,
+    roles: [],
+    component: Login,
   },
   {
     key: 'notfound',

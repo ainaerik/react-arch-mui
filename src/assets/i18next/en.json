@@ -30,6 +30,9 @@
     },
     "fullpageLoading": {
       "text": "Loading..."
+    },
+    "login": {
+      "text":"Login"
     }
   }
 }
