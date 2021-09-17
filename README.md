@@ -1,4 +1,4 @@
-# ReactArch
+# React Arch MUI
 
 React Typescript App architecture with React Context API, i18n and MUI
 
@@ -10,6 +10,9 @@ React Typescript App architecture with React Context API, i18n and MUI
 - Internationalization using i18next and [React i18next](https://react.i18next.com/)
 - Theming and Theme switching with [MUI](https://mui.com)
 - Module import resolver `tsconfig.paths.json`
+- Lazy load components
+
+---
 
 ## Setup
 
