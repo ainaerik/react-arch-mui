@@ -1,0 +1,2 @@
+(this["webpackJsonpmeal-app"]=this["webpackJsonpmeal-app"]||[]).push([[6],{163:function(t,e,a){"use strict";a.r(e),a.d(e,"default",(function(){return i}));a(0);var n=a(126),c=a(128),r=a(124),o=Object(r.a)({root:{}}),s=a(60),u=a(2),i=function(t){var e=Object(n.a)("common").t,a=o();return Object(u.jsx)(s.a,{title:e("tabs.unauthorized"),children:Object(u.jsx)(c.a,{className:a.root,children:e("pages.unauthorized.text")})})}}}]);
+//# sourceMappingURL=6.280d03a3.chunk.js.map
