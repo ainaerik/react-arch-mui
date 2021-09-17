@@ -18,7 +18,7 @@ const NotFound: FC<NotFoundProps> = (props) => {
 
   return (
     <Layout title={t('tabs.notfound')}>
-      <Box className={classes.root}>NotFound</Box>
+      <Box className={classes.root}>{t('pages.notfound.text')}</Box>
     </Layout>
   )
 }

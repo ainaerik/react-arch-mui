@@ -47,16 +47,10 @@ const Home: FC<HomeProps> = (props) => {
           {mode === 'light' ? <LightIcon /> : <DarkIcon />}
         </Button>{' '}
         <ButtonGroup disableElevation variant="contained">
-          <Button
-            disabled={lang === 'en'}
-            onClick={() => handleChangeLang('en')}
-          >
+          <Button disabled={lang === 'en'} onClick={() => handleChangeLang('en')}>
             EN
           </Button>
-          <Button
-            disabled={lang === 'fr'}
-            onClick={() => handleChangeLang('fr')}
-          >
+          <Button disabled={lang === 'fr'} onClick={() => handleChangeLang('fr')}>
             FR
           </Button>
         </ButtonGroup>

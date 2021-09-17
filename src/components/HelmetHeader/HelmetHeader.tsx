@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
 import AppContext from '@contexts/AppContext'
+import { APP_URL } from '@utils/Config'
 
 interface HelmetHeaderProps {
   title: string
@@ -21,7 +22,7 @@ const HelmetHeader: FC<HelmetHeaderProps> = ({ title }) => {
     <Helmet htmlAttributes={{ lang }}>
       <title>{`${title} - ${t('app.name')}`}</title>
       <meta property="og:title" content={title} />
-      <link rel="canonical" href={t('app.url')} />
+      <link rel="canonical" href={t('app.url') || APP_URL} />
     </Helmet>
   )
 }

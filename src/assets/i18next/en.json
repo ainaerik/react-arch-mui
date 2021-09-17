@@ -16,10 +16,7 @@
   "components":{
     "textfield": {},
     "button": {},
-    "label": {},
-    "fullpageLoading": {
-      "text": "Loading..."
-    }
+    "label": {}
   },
   "pages":{
     "home": {
@@ -30,6 +27,9 @@
     },
     "unauthorized": {
       "text": "Unauthorized Access"
+    },
+    "fullpageLoading": {
+      "text": "Loading..."
     }
   }
 }

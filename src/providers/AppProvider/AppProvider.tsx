@@ -5,10 +5,11 @@ import AppLang from '@interfaces/AppLang'
 import AppContext from '@contexts/AppContext'
 import ThemeProvider from '@providers/ThemeProvider'
 import useLocalStorage from '@hooks/useLocalStorage'
+import { DEFAULT_LANG } from '@utils/Config'
 
 const AppProvider: FC = (props) => {
   const { i18n } = useTranslation()
-  const [lang, setLang] = useLocalStorage<AppLang>('lang', 'en')
+  const [lang, setLang] = useLocalStorage<AppLang>('lang', DEFAULT_LANG as AppLang)
 
   const handleChangeLang = (lang: AppLang) => {
     i18n.changeLanguage(lang)

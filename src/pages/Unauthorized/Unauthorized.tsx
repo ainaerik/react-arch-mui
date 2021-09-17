@@ -18,7 +18,7 @@ const Unauthorized: FC<UnauthorizedProps> = (props) => {
 
   return (
     <Layout title={t('tabs.unauthorized')}>
-      <Box className={classes.root}>Unauthorized</Box>
+      <Box className={classes.root}>{t('pages.unauthorized.text')}</Box>
     </Layout>
   )
 }

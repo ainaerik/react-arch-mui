@@ -10,11 +10,12 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import resources from '@assets/i18next'
 import AppProvider from '@providers/AppProvider'
+import { DEFAULT_LANG } from '@utils/Config'
 
 // Internationalization
 i18next.use(initReactI18next).init({
   interpolation: { escapeValue: false },
-  lng: 'en',
+  lng: DEFAULT_LANG,
   resources,
 })
 

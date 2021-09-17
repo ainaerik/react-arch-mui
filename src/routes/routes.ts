@@ -1,6 +1,6 @@
 import { lazy } from 'react'
 
-import { ROLE } from '@utils/role'
+import { ROLE } from '@utils/Role'
 
 export interface RouteInterface {
   key: string

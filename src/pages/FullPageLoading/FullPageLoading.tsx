@@ -15,7 +15,7 @@ const FullPageLoading: FC<FullPageLoadingProps> = (props) => {
   const { t } = useTranslation('common')
   const classes = useStyles()
 
-  return <Box className={classes.root}>FullPageLoading...</Box>
+  return <Box className={classes.root}>{t('pages.fullpageLoading.text')}</Box>
 }
 
 export default FullPageLoading
