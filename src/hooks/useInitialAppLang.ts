@@ -15,7 +15,7 @@ const useInitialAppLang = () => {
   useMemo(() => {
     const currentLang = lang || 'en'
     setLang(currentLang)
-  }, [lang])
+  }, [])
 }
 
 export default useInitialAppLang
