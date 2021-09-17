@@ -1,17 +1,28 @@
-# Meal App
+# ReactArch
 
-React app using [The MealDB API](https://www.themealdb.com/api.php)
+React Typescript App architecture with React Context API, i18n and MUI
 
 ---
 
+## Included
+
+- Role-based authorization
+- Internationalization using i18next and [React i18next](https://react.i18next.com/)
+- Theming and Theme switching with [MUI](https://mui.com)
+- Module import resolver `tsconfig.paths.json`
+
 ## Setup
 
-To setup a local development, run these following commands :
+To setup a local development :
 
-```sh
-yarn install
-yarn start
-```
+- Rename `.env.dev` file to `.env`
+
+- Then, run the following commands
+
+  ```sh
+  yarn install
+  yarn start
+  ```
 
 ---
 
