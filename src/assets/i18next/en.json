@@ -12,5 +12,24 @@
     "home": "Home",
     "notfound": "Page not found",
     "unauthorized": "Unauthorized page"
+  },
+  "components":{
+    "textfield": {},
+    "button": {},
+    "label": {},
+    "fullpageLoading": {
+      "text": "Loading..."
+    }
+  },
+  "pages":{
+    "home": {
+      "text": "Welcome Home"
+    },
+    "notfound": {
+      "text": "Page not found"
+    },
+    "unauthorized": {
+      "text": "Unauthorized Access"
+    }
   }
 }

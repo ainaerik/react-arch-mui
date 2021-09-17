@@ -12,5 +12,24 @@
     "home": "Accueil",
     "notfound": "Page introuvable",
     "unauthorized": "Page non autorisée"
+  },
+  "components":{
+    "textfield": {},
+    "button": {},
+    "label": {},
+    "fullpageLoading": {
+      "text": "Chargement..."
+    }
+  },
+  "pages":{
+    "home": {
+      "text": "Bienvenue"
+    },
+    "notfound": {
+      "text": "Page introuvable"
+    },
+    "unauthorized": {
+      "text": "Accès non autorisé"
+    }
   }
 }
