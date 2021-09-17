@@ -1,11 +1,27 @@
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 
+import AppLang from '@interfaces/AppLang'
 import AppContext from '@contexts/AppContext'
 import ThemeProvider from '@providers/ThemeProvider'
+import useLocalStorage from '@hooks/useLocalStorage'
 
 const AppProvider: FC = (props) => {
+  const { i18n } = useTranslation()
+  const [lang, setLang] = useLocalStorage<AppLang>('lang', 'en')
+
+  const handleChangeLang = (lang: AppLang) => {
+    i18n.changeLanguage(lang)
+    setLang(lang)
+  }
+
   return (
-    <AppContext.Provider value={{}}>
+    <AppContext.Provider
+      value={{
+        lang,
+        setLang: handleChangeLang,
+      }}
+    >
       <ThemeProvider>{props.children}</ThemeProvider>
     </AppContext.Provider>
   )

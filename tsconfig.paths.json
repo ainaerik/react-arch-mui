@@ -13,7 +13,8 @@
       "@themes/*": ["./src/themes/*"],
       "@assets/*": ["./src/assets/*"],
       "@images/*": ["./src/assets/images/*"],
-      "@services/*": ["./src/services/*"]
+      "@services/*": ["./src/services/*"],
+      "@interfaces/*": ["./src/types/*"]
     }
   }
 }

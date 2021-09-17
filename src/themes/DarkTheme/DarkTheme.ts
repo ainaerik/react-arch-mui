@@ -53,8 +53,8 @@ const DarkThemeOptions: ThemeOptions = {
       secondary: '',
     },
     background: {
-      default: '#1E1E56',
-      paper: '#131313',
+      default: '#212a38',
+      paper: '#354359',
     },
     common: {
       black: '#000',
