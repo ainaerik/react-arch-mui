@@ -1,17 +1,18 @@
-import React, { FC, useContext } from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import DarkIcon from '@mui/icons-material/Brightness7'
 import LightIcon from '@mui/icons-material/Brightness4'
 import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import ButtonGroup from '@mui/material/ButtonGroup'
 import Typography from '@mui/material/Typography'
+import IconButton from '@mui/material/IconButton'
+import ToggleButton from '@mui/material/ToggleButton'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 
 import useStyles from './styles'
-import ThemeContext from '@contexts/ThemeContext'
-import AppContext from '@contexts/AppContext'
-import Layout from '@components/Layout/Layout'
 import AppLang from '@interfaces/AppLang'
+import Layout from '@components/Layout/Layout'
+import { useAppContext } from '@contexts/AppContext'
+import { useThemeContext } from '@contexts/ThemeContext'
 
 interface HomeProps {}
 
@@ -25,37 +26,38 @@ const Home: FC<HomeProps> = (props) => {
   const classes = useStyles()
 
   /**
-   * INFO:
-   * The content of this page is just to simulate a theme mode
+   * NOTE :
+   * The content of this page is just to
+   * simulate a theme mode and app lang
    */
-  const { mode, toggleMode } = useContext(ThemeContext)
-  const { lang, setLang } = useContext(AppContext)
+  const { lang, setLang } = useAppContext()
+  const { mode, toggleMode } = useThemeContext()
 
   const handleChangeTheme = () => {
     toggleMode()
   }
 
-  const handleChangeLang = (lang: AppLang) => {
+  const handleChangeLang = (event: React.MouseEvent<HTMLElement>, lang: AppLang) => {
     setLang(lang)
   }
 
   return (
     <Layout title={t('tabs.home')}>
       <Box className={classes.root}>
-        <Typography variant="h1">{t('pages.home.text')}</Typography>
-        <Button variant="contained" onClick={handleChangeTheme}>
-          {mode === 'light' ? <LightIcon /> : <DarkIcon />}
-        </Button>{' '}
-        <ButtonGroup disableElevation variant="contained">
-          <Button disabled={lang === 'en'} onClick={() => handleChangeLang('en')}>
-            EN
-          </Button>
-          <Button disabled={lang === 'fr'} onClick={() => handleChangeLang('fr')}>
-            FR
-          </Button>
-        </ButtonGroup>
-        <br />
-        <br />
+        <Typography variant="h4">{t('pages.home.text')}</Typography>
+        <Box sx={{ mt: 2 }} display="flex" alignItems="center" justifyContent="center">
+          <IconButton onClick={handleChangeTheme} sx={{ ml: 2 }}>
+            {mode === 'light' ? <LightIcon /> : <DarkIcon />}
+          </IconButton>
+          <ToggleButtonGroup size="small" value={lang} exclusive onChange={handleChangeLang} aria-label="app language">
+            <ToggleButton value="en" aria-label="en language">
+              EN
+            </ToggleButton>
+            <ToggleButton value="fr" aria-label="fr language">
+              FR
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </Box>
       </Box>
     </Layout>
   )
