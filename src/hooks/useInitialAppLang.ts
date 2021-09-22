@@ -1,8 +1,8 @@
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 
-import AppContext from '@contexts/AppContext'
 import AppLang from '@interfaces/AppLang'
 import { DEFAULT_LANG } from '@utils/Config'
+import { useAppContext } from '@contexts/AppContext'
 
 /**
  * useInitialAppLang
@@ -12,11 +12,12 @@ import { DEFAULT_LANG } from '@utils/Config'
  * @returns
  */
 const useInitialAppLang = () => {
-  const { lang, setLang } = useContext(AppContext)
+  const { lang, setLang } = useAppContext()
 
   useMemo(() => {
     const currentLang = lang || (DEFAULT_LANG as AppLang)
     setLang(currentLang)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 }
 
