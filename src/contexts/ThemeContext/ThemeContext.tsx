@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useContext } from 'react'
 import { PaletteMode } from '@mui/material'
 
 import { DEFAULT_THEME } from '@utils/Config'
@@ -16,4 +16,6 @@ const ThemeContext = createContext<ThemeContextInterface>({
   toggleMode: () => {},
 })
 
-export default ThemeContext
+const useThemeContext = () => useContext(ThemeContext)
+
+export { ThemeContext as default, useThemeContext }
