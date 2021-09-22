@@ -26,7 +26,7 @@
     },
     "notfound": {
       "text": "Page introuvable",
-      "description": "La page que vous avez accéder est introuvable.",
+      "description": "La page que vous souhaitez accéder est introuvable.",
       "action": "Retourner à l'accueil"
     },
     "unauthorized": {
