@@ -11,11 +11,11 @@ interface HeaderProps {}
  * @param props HeaderProps
  * @returns
  */
-const Header: FC<HeaderProps> = (props) => {
+const Header: FC<HeaderProps> = ({}) => {
   const { t } = useTranslation('common')
   const classes = useStyles()
 
-  return <Box className={classes.root}>Header</Box>
+  return <Box className={classes.root}></Box>
 }
 
 export default Header

@@ -11,11 +11,11 @@ interface FooterProps {}
  * @param props FooterProps
  * @returns
  */
-const Footer: FC<FooterProps> = (props) => {
+const Footer: FC<FooterProps> = ({}) => {
   const { t } = useTranslation('common')
   const classes = useStyles()
 
-  return <Box className={classes.root}>Footer</Box>
+  return <Box className={classes.root}></Box>
 }
 
 export default Footer

@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { useTranslation } from 'react-i18next'
 import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 
 import useStyles from './styles'
 import Header from '@components/Header'
@@ -17,17 +17,16 @@ interface LayoutProps {
  * @returns
  */
 const Layout: FC<LayoutProps> = ({ children, title }) => {
-  const { t } = useTranslation('common')
   const classes = useStyles()
 
   return (
     <>
       <HelmetHeader title={title} />
-      <Box className={classes.layout}>
-        <Header />
-        <Box className={classes.content}>{children}</Box>
-        <Footer />
-      </Box>
+      <Header />
+      <Container maxWidth={false}>
+        <Box className={classes.root}>{children}</Box>
+      </Container>
+      <Footer />
     </>
   )
 }

@@ -1,8 +1,7 @@
 import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
-  layout: {},
-  content: {},
+  root: {},
 })
 
 export default useStyles
