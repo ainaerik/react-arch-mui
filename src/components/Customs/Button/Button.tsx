@@ -10,12 +10,12 @@ interface EnhancedButtonProps extends ButtonProps {}
  * @param props EnhancedButtonProps
  * @returns
  */
-const EnhancedButton: FC<EnhancedButtonProps> = (props) => {
+const EnhancedButton: FC<EnhancedButtonProps> = ({ children, ...props }) => {
   const classes = useStyles()
 
   return (
     <Button {...props} className={classes.root}>
-      {props.children}
+      {children}
     </Button>
   )
 }
