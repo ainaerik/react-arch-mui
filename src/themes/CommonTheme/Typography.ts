@@ -5,34 +5,37 @@ import { ThemeOptions } from '@mui/material/styles'
  */
 const TypographyOptions: ThemeOptions = {
   typography: {
-    // fontSize: 14,
+    fontSize: 12,
     // htmlFontSize: 16,
     fontFamily: 'Poppins',
     fontWeightBold: 700,
     fontWeightLight: 300,
     fontWeightMedium: 500,
     h1: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h2: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h3: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h4: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h5: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h6: {
-      fontWeight: 600,
+      fontWeight: 700,
     },
     button: {
       fontSize: 14,
       fontWeight: 500,
       textTransform: 'uppercase',
+    },
+    subtitle1: {
+      fontWeight: 500,
     },
   },
 }

@@ -20,7 +20,26 @@ const ComponentOptions: ThemeOptions = {
       defaultProps: {
         disableElevation: true,
         disableRipple: false,
-        size: 'medium',
+      },
+      styleOverrides: {
+        sizeLarge: {
+          padding: '12px 22px',
+        },
+      },
+    },
+    MuiAppBar: {
+      defaultProps: {
+        enableColorOnDark: true,
+      },
+    },
+    MuiLink: {
+      defaultProps: {
+        underline: 'hover',
+      },
+      styleOverrides: {
+        root: {
+          cursor: 'pointer',
+        },
       },
     },
     // MuiFilledInput: {
@@ -91,6 +110,19 @@ const ComponentOptions: ThemeOptions = {
     //     variant: 'dense',
     //   },
     // },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          fontSize: '12px',
+          fontWeight: 400,
+        },
+      },
+    },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 0,
+      },
+    },
   },
 }
 

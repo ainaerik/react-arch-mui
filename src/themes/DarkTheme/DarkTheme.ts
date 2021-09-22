@@ -6,20 +6,21 @@ import { ThemeOptions } from '@mui/material/styles'
 const DarkThemeOptions: ThemeOptions = {
   palette: {
     mode: 'dark',
-    divider: 'rgba(255, 255, 255, 0.13)',
+    divider: 'rgba(255, 255, 255, 0.12)',
     // Used by `getContrastText()` to maximize the contrast between the background and the text.
     contrastThreshold: 3,
     // Used by the functions below to shift a color's luminance by approximately two indexes within its tonal palette.
     tonalOffset: 0.2,
+    textSecondary: '#b4b4b4',
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#3C1BA8',
+      main: '#d4512b',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
       // light: will be calculated from palette.secondary.main,
-      main: '#5D5D75',
+      main: '#57647f',
       // dark: will be calculated from palette.secondary.main,
       // contrastText: will be calculated from palette.secondary.main,
     },
@@ -48,13 +49,13 @@ const DarkThemeOptions: ThemeOptions = {
       // contrastText: will be calculated from palette.secondary.main,
     },
     text: {
-      primary: '#FAFAFA',
+      primary: '#fafafa',
+      secondary: 'rgba(29, 183, 90, 0.7)',
       disabled: 'rgba(255, 255, 255, 0.5)',
-      secondary: '',
     },
     background: {
-      default: '#212a38',
-      paper: '#354359',
+      default: '#22272E',
+      paper: '#2D333B',
     },
     common: {
       black: '#000',
