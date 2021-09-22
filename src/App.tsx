@@ -1,4 +1,4 @@
-import React, { Suspense, useContext, useMemo } from 'react'
+import { Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
@@ -8,26 +8,23 @@ import CustomRoute from '@routes/CustomRoute'
 import PrivateRoute from '@routes/PrivateRoute'
 import NotFound from '@pages/NotFound'
 import FullPageLoading from '@pages/FullPageLoading'
-import ThemeContext from '@contexts/ThemeContext'
 import useInitialAppLang from '@hooks/useInitialAppLang'
-import { DarkTheme, LightTheme } from '@themes/index'
+import useInitialAppTheme from '@hooks/useInitialAppTheme'
 
 /**
  * Main App
  * @returns
  */
 const App = () => {
-  const { mode } = useContext(ThemeContext)
-
   /**
    * Initialize app language
    */
   useInitialAppLang()
 
   /**
-   * Toggle theme
+   * Initialize app theme
    */
-  const theme = useMemo(() => (mode === 'dark' ? DarkTheme : LightTheme), [mode])
+  const theme = useInitialAppTheme()
 
   /**
    * Routes
