@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-arch-mui"]=this["webpackJsonpreact-arch-mui"]||[]).push([[5],{171:function(t,a,c){"use strict";c.r(a),c.d(a,"default",(function(){return u}));c(0);var e=c(150),r=c(152),n=c(153),i=c(147),o=Object(i.a)({root:{}}),s=c(2),u=function(t){var a=Object(e.a)("common").t,c=o();return Object(s.jsx)(r.a,{className:c.root,children:Object(s.jsx)(n.a,{variant:"h1",children:a("pages.login.text")})})}}}]);
+//# sourceMappingURL=5.c9d39422.chunk.js.map
