@@ -14,10 +14,10 @@ export interface RouteInterface {
 /**
  * Lazy loading components
  */
-const Home = lazy(() => import('../pages/Home'))
-const Login = lazy(() => import('../pages/Login'))
-const NotFound = lazy(() => import('../pages/NotFound'))
-const Unauthorized = lazy(() => import('../pages/Unauthorized'))
+const Home = lazy(() => import('@pages/Home'))
+const Login = lazy(() => import('@pages/Login'))
+const NotFound = lazy(() => import('@pages/NotFound'))
+const Unauthorized = lazy(() => import('@pages/Unauthorized'))
 
 /**
  * Routes definition
