@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, useContext } from 'react'
 
 import AppLang from '@interfaces/AppLang'
 import { DEFAULT_LANG } from '@utils/Config'
@@ -16,4 +16,6 @@ const AppContext = createContext<AppContextInterface>({
   setLang: () => {},
 })
 
-export default AppContext
+const useAppContext = () => useContext(AppContext)
+
+export { AppContext as default, useAppContext }
