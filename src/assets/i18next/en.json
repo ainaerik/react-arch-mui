@@ -10,8 +10,10 @@
   },
   "tabs":{
     "home": "Home",
+    "login": "Login",
     "notfound": "Page not found",
-    "unauthorized": "Unauthorized page"
+    "unauthorized": "Unauthorized page",
+    "fullpageLoading": "Loading"
   },
   "components":{
     "textfield": {},
@@ -23,16 +25,25 @@
       "text": "Welcome Home"
     },
     "notfound": {
-      "text": "Page not found"
+      "text": "Page Not Found",
+      "description": "The page you want to access is not found.",
+      "action": "Go to Home"
     },
     "unauthorized": {
-      "text": "Unauthorized Access"
+      "text": "Unauthorized",
+      "description": "You do not have access to the page you want."
     },
     "fullpageLoading": {
       "text": "Loading..."
     },
     "login": {
-      "text":"Login"
+      "title":"Authentication",
+      "submit": "Login",
+      "footerText":"Don't have an account ?",
+      "placeholder": {
+        "email": "Email",
+        "password": "Password"
+      }
     }
   }
 }

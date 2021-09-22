@@ -10,8 +10,10 @@
   },
   "tabs":{
     "home": "Accueil",
+    "login": "Connexion",
     "notfound": "Page introuvable",
-    "unauthorized": "Page non autorisée"
+    "unauthorized": "Page non autorisée",    
+    "fullpageLoading": "Chargement"
   },
   "components":{
     "textfield": {},
@@ -23,16 +25,25 @@
       "text": "Bienvenue"
     },
     "notfound": {
-      "text": "Page introuvable"
+      "text": "Page introuvable",
+      "description": "La page que vous avez accéder est introuvable.",
+      "action": "Retourner à l'accueil"
     },
     "unauthorized": {
-      "text": "Accès non autorisé"
+      "text": "Accès non autorisé",
+      "description": "Vous n'avez pas accès à la page que vous souhaitez."
     },
     "fullpageLoading": {
       "text": "Chargement..."
     },  
     "login": {
-      "text":"Connexion"
+      "title":"Se connecter",
+      "submit": "Connexion",
+      "footerText":"Vous n'êtes pas encore inscrit ?",
+      "placeholder":{
+        "email": "Email",
+        "password": "Mot de passe"
+      }
     }
   }
 }
