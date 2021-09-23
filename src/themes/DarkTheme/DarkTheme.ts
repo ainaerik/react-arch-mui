@@ -50,7 +50,7 @@ const DarkThemeOptions: ThemeOptions = {
     },
     text: {
       primary: '#fafafa',
-      secondary: 'rgba(29, 183, 90, 0.7)',
+      secondary: '#d4d4d4b3',
       disabled: 'rgba(255, 255, 255, 0.5)',
     },
     background: {
