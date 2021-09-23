@@ -2,6 +2,9 @@ import { Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
+import AdapterMomentDate from '@mui/lab/AdapterMoment'
+import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import 'moment/min/locales'
 
 import routes from '@routes/routes'
 import CustomRoute from '@routes/CustomRoute'
@@ -10,6 +13,7 @@ import NotFound from '@pages/NotFound'
 import FullPageLoading from '@pages/FullPageLoading'
 import useInitialAppLang from '@hooks/useInitialAppLang'
 import useInitialAppTheme from '@hooks/useInitialAppTheme'
+import { useAppContext } from '@contexts/AppContext'
 
 /**
  * Main App
@@ -20,6 +24,7 @@ const App = () => {
    * Initialize app language
    */
   useInitialAppLang()
+  const { lang } = useAppContext()
 
   /**
    * Initialize app theme
@@ -44,13 +49,15 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Suspense fallback={<FullPageLoading />}>
-        <Switch>
-          {getRoutes()}
-          <Route component={NotFound} />
-        </Switch>
-      </Suspense>
+      <LocalizationProvider dateAdapter={AdapterMomentDate} locale={lang}>
+        <CssBaseline />
+        <Suspense fallback={<FullPageLoading />}>
+          <Switch>
+            {getRoutes()}
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
+      </LocalizationProvider>
     </ThemeProvider>
   )
 }
