@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import AppLang from '@interfaces/AppLang'
 import AppContext from '@contexts/AppContext'
 import ThemeProvider from '@providers/ThemeProvider'
 import useLocalStorage from '@hooks/useLocalStorage'
 import { DEFAULT_LANG } from '@utils/Config'
+import { AppLang } from '@interfaces/AppLang'
 
 const AppProvider: FC = (props) => {
   const { i18n } = useTranslation()

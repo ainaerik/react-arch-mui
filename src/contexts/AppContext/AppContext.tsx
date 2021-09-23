@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
 
-import AppLang from '@interfaces/AppLang'
+import { AppLang } from '@interfaces/AppLang'
 import { DEFAULT_LANG } from '@utils/Config'
 
 interface AppContextInterface {

@@ -3,16 +3,17 @@ import { useTranslation } from 'react-i18next'
 import DarkIcon from '@mui/icons-material/Brightness7'
 import LightIcon from '@mui/icons-material/Brightness4'
 import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
-import ToggleButton from '@mui/material/ToggleButton'
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 
 import useStyles from './styles'
-import AppLang from '@interfaces/AppLang'
 import Layout from '@components/Layout/Layout'
+import ToggleLanguage from '@components/ToggleLanguage'
+import LanguageMaps from '@utils/Languages'
 import { useAppContext } from '@contexts/AppContext'
 import { useThemeContext } from '@contexts/ThemeContext'
+import { AppLang } from '@interfaces/AppLang'
 
 interface HomeProps {}
 
@@ -45,19 +46,12 @@ const Home: FC<HomeProps> = (props) => {
     <Layout title={t('tabs.home')}>
       <Box className={classes.root}>
         <Typography variant="h4">{t('pages.home.text')}</Typography>
-        <Box sx={{ mt: 2 }} display="flex" alignItems="center" justifyContent="center">
+        <Stack>
           <IconButton onClick={handleChangeTheme} sx={{ ml: 2 }}>
             {mode === 'light' ? <LightIcon /> : <DarkIcon />}
           </IconButton>
-          <ToggleButtonGroup size="small" value={lang} exclusive onChange={handleChangeLang} aria-label="app language">
-            <ToggleButton value="en" aria-label="en language">
-              EN
-            </ToggleButton>
-            <ToggleButton value="fr" aria-label="fr language">
-              FR
-            </ToggleButton>
-          </ToggleButtonGroup>
-        </Box>
+          <ToggleLanguage lang={lang} languages={LanguageMaps} handleChangeLang={handleChangeLang} />
+        </Stack>
       </Box>
     </Layout>
   )
