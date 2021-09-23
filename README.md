@@ -13,6 +13,7 @@ Demo : https://ainaerik.github.io/react-arch-mui/
 - Theming and Theme switching with [MUI](https://mui.com)
 - Module import resolver `tsconfig.paths.json`
 - Lazy load components
+- LocaleProvider for date & time
 
 ---
 
