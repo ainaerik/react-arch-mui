@@ -17,6 +17,28 @@ Demo : https://ainaerik.github.io/react-arch-mui/
 
 ---
 
+## Source Folder Structure
+
+```sh
+|- public/
+|- src/
+| |- assets/       application resources as css, images, locales,...
+| |- components/   reusable and custom components.
+| |- contexts/     application contexts using React Context API.
+| |- hooks/        custom hooks.
+| |- pages/        all application pages should inside this folder.
+| |- providers/    application provider, implementation of context defined in `contexts/` folder.
+| |- routes/       application routes definition and route access management.
+| |- services/     all application services, dependency injection.
+| |- themes/       application themes.
+| |- types/        enum, function, hooks types definition.
+| |- utils/        utility functions.
+| |- App.tsx       main app
+| |- index.tsx     entrypoint
+```
+
+---
+
 ## Setup
 
 To setup a local development :
